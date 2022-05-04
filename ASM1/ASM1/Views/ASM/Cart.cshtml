@@ -1,0 +1,197 @@
+﻿@{
+        ViewData["Title"] = "Cart";
+    }
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/css/Style.css">
+</head>
+<body>
+    <section id="header">
+            <div class="header container">
+                <div class="nav-bar">
+                    <div class="brand">
+                        <a asp-controller="ASM" asp-action="Index" >
+                            <h1><span>H</span>ien <span>S</span>tore</h1>
+                        </a>
+                    </div>
+                    <div class="nav-list">
+                        <div class="hamburger">
+                            <div class="bar"></div>
+                        </div>
+                        <ul>
+
+                            <li class="sp">
+                                <a href="#San-Pham" data-after="SanPham">Sản Phẩm</a>
+                                <div class="sub-menu1">
+                                    <ul>
+                                        <li>
+                                            <a href="#Nam">
+                                                <img src="/images/main/chonam.jpg">
+                                                <h3>Cho Nam</h3>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#Nu">
+                                                <img src="/images/main/chonu.jpeg">
+                                                <h3>Cho Nữ</h3>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                            <li><a href="#Nam" data-after="Nam">Nam</a></li>
+                            <li><a href="#Nu" data-after="Nu">Nữ</a></li>
+                            <li><a href="#Thong-Tin" data-after="ThongTin">Thông Tin</a></li>
+                            <li>
+                                <a>
+                                    <div class="search-box">
+                                        <div class="input-box">
+                                            <input type="text" placeholder="Tìm Kiếm Sản Phẩm">
+                                        </div>
+                                        <button class="search-button">
+                                            <img src="/images/main/search.png" alt="">
+                                        </button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ASM/Cart">
+                                    <div class="gio-hang">
+                                        <button class="button-giohang">
+                                            <img src="/images/main/giohang.png">
+                                        </button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                @{ if (ViewBag.UsersName != null)
+                                    {
+                                        <a asp-controller="ASM" asp-action="Login">
+                                            <div class="acount">
+
+                                                <button class="button-acount">
+                                                    <img src="/images/main/account.png">
+                                                </button>
+
+                                            </div>
+                                            <h3>@ViewBag.UsersName</h3>
+                                        </a>
+                                        <div class="sub-menu1">
+                                            <ul>
+
+                                                <li>
+                                                    <a asp-controller="Users" asp-action="Index">
+                                                        <h3>Quản Lý Users</h3>
+                                                    </a>
+                                                    <a asp-controller="Products" asp-action="Create">
+                                                        <h3>Quản Lý Sản Phẩm</h3>
+                                                    </a>
+                                                    <a onclick="location.href = '@Url.Action("Logout", "ASM")'">
+                                                        <h3>Log Out</h3>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        }
+                                        else
+                                        {
+                                          <a asp-controller="ASM" asp-action="Login">
+                                          <div class="acount">
+
+                                          <button class="button-acount">
+                                           <img src="/images/main/account.png">
+                                          </button>
+
+                                         </div>
+                                          </a>
+                                        }
+                                    }
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <div class="container">
+        <div class="payment_details">
+            <h1>THÔNG TIN GIAO HÀNG</h1>
+            <div class="details_card">
+                <div class="name_address">
+                    <div class="first_lastName">
+                        <input type="text" placeholder="Họ & Tên" required />
+                        <input type="text" placeholder="SĐT" required />
+                    </div>
+                    <div class="address">
+                        <input type="text" placeholder="Email" required />
+                        <input type="text" onkeyup="change()" id="put" placeholder="Địa Chỉ" required />
+                    </div>
+                </div>
+                <h1>Ghi Chú</h1>
+                <div class="ghichu">
+                    <input type="text" placeholder="" />
+                </div>
+
+            </div>
+        </div>
+        <div class="order_summary">
+            <h1>Đơn Hàng</h1>
+            <div class="summary_card">
+                @foreach (var item in ViewBag.cart)
+                {
+                    <div class="card_item">
+                        <div class="product_img">
+                            <img src="@item.Products.ProductImage" />
+                        </div>
+                        <div class="product_info">
+                            
+                            <h1>@item.Products.ProductName</h1>
+                            <div class="close-btn">
+                                <i class="fa fa-close"></i>
+                            </div>
+                            <div class="product_rate_info">
+                                <h1>@item.Products.ProductPrice</h1>
+                                <a asp-controller="ASM" asp-action="Remove" asp-route-id="@item.Products.ProductId">
+                                    <span class="pqt-minus" >-</span>
+                                </a>
+                                
+                                <span class="pqt">1</span>
+                                <span class="pqt-plus">+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="order_donhang">
+                        <p>Đơn Hàng</p>
+                        <h4>@ViewBag.total</h4>
+                    </div>
+                }
+                    <div class="order_ship">
+                        <p>Phí Vận Chuyển</p>
+                        <h4>30.000 VNĐ</h4>
+                    </div>
+                    <div class="order_tong">
+                        <p>Tổng Cộng</p>
+                        <h4>@ViewBag.total1</h4>
+                    </div>
+                    <div class="ThanhToan">
+                        <a onclick="location.href = '@Url.Action("Create", "CartDetails")'">
+                            <input type="submit" value="Hoàn Tất Đặt Hàng">
+                        </a>
+                        
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

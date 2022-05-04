@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="/css/Cart.css">
+</head>
+<body>
+    <div class="container">
+        <div class="payment_details">
+            <h1>THÔNG TIN GIAO HÀNG</h1>
+            <div class="details_card">
+                <div class="name_address">
+                    <div class="first_lastName">
+                        <input type="text" placeholder="Họ & Tên" required />
+                        <input type="text" placeholder="SĐT" required />
+                    </div>
+                    <div class="address">
+                        <input type="text" placeholder="Email" required />
+                        <input type="text" onkeyup="change()" id="put" placeholder="Địa Chỉ" required />
+                    </div>
+                </div>
+                <h1>Ghi Chú</h1>
+                <div class="ghichu">
+                    <input type="text" placeholder="" />
+                </div>
+
+            </div>
+        </div>
+        <div class="order_summary">
+            <h1>Đơn Hàng</h1>
+            <div class="summary_card">
+                <div class="card_item">
+                    <div class="product_img">
+                        <img src="/images/main/outsale.jpeg" />
+                    </div>
+                    <div class="product_info">
+                        <h1>Jordan 1 Low</h1>
+                        <div class="close-btn">
+                            <i class="fa fa-close"></i>
+                        </div>
+                        <div class="product_rate_info">
+                            <h1>3.990.000</h1>
+                            <span class="pqt-minus">-</span>
+                            <span class="pqt">1</span>
+                            <span class="pqt-plus">+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="product_img">
+                        <img src="images/main/banchay.jpg" alt="" />
+                    </div>
+                    <div class="product_info">
+                        <h1>Jordan 1 Low Pink</h1>
+                        <div class="close-btn">
+                            <i class="fa fa-close"></i>
+                        </div>
+                        <div class="product_rate_info">
+                            <h1>2.990.000</h1>
+                            <span class="pqt-minus">-</span>
+                            <span class="pqt">1</span>
+                            <span class="pqt-plus">+</span>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="order_donhang">
+                    <p>Đơn Hàng</p>
+                    <h4>3.990.000 VNĐ</h4>
+                </div>
+                <div class="order_ship">
+                    <p>Phí Vận Chuyển</p>
+                    <h4>30.000 VNĐ</h4>
+                </div>
+                <div class="order_tong">
+                    <p>Tổng Cộng</p>
+                    <h4>4.020.000 VNĐ</h4>
+                </div>
+                <div class="ThanhToan">
+                    <input type="submit" value="Hoàn Tất Đặt Hàng">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

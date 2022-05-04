@@ -1,0 +1,57 @@
+﻿@model ASM1.Models.Users
+@{
+    ViewData["Title"] = "Login";
+
+}
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <div class="center">
+        <h1><span>H</span>ien <span>S</span>tore</h1>
+        <form method="post">
+            <div class="text-danger"></div>
+            <div class="txt_field">
+                <input name="usersName" type="text" required>
+                <span></span>
+                <label>UsersName</label>
+            </div>
+            <div class="txt_field">
+                <input name="passWord" type="password" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="pass">Forgot Password?</div>
+            @if (ViewBag.error != null)
+            {
+                <span>@ViewBag.error</span>
+            }
+            <div class="login">
+                <input type="submit" value="Đăng Nhập" onclick="location.href = '@Url.Action("Login", "ASM")'" class="btn btn-primary" />
+            </div>
+
+            <div class="exit">
+                <a asp-controller="ASM" asp-action="Index">
+                    <input value="Thoát">
+                </a>
+            </div>
+            <div class="signup_link">
+                Not a member? <a asp-controller="Users" asp-action="Create">Đăng Ký</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+

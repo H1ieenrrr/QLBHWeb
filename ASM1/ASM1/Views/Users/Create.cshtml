@@ -1,0 +1,63 @@
+﻿@model ASM1.Models.Users
+
+@{
+    ViewData["Title"] = "Create";
+}
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <div class="center">
+        <h1><span>H</span>ien <span>S</span>tore</h1>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="txt_field">
+                <input asp-for="UsersName" class="form-control" type="text" required />
+                <span></span>
+                <label>UsersName</label>
+
+            </div>
+            <div class="txt_field">
+                <input asp-for="UsersEmail" class="form-control" type="text" required />
+                <span></span>
+                <label>Email</label>
+            </div>
+            <div class="txt_field">
+                <input asp-for="UsersPassword" class="form-control" type="password" required />
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="txt_field">
+                <input asp-for="UsersPhone" class="form-control" type="text" required />
+                <span></span>
+                <label>Phone</label>
+            </div>
+            @if (ViewBag.error != null)
+            {
+                <span>@ViewBag.error</span>
+            }
+            <div class="login">
+                <a asp-controller="ASM" asp-action="Login">
+                    <input type="submit" value="Đăng Ký" class="btn btn-primary" />
+                </a>
+            </div>
+            <div class="exit">
+                <a asp-controller="ASM" asp-action="Index">
+                    <input value="Thoát">
+                </a>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

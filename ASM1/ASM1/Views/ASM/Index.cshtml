@@ -1,0 +1,196 @@
+﻿@{ 
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hien Store</title>
+    <link rel="stylesheet" href="~/css/Style.css">
+</head>
+<body>
+
+
+    <section id="main">
+        <div class="main container">
+            <div>
+                <H1>Sneaker,</H1>
+                <h1>Off 20%</h1>
+                <a href="#" type="button" class="cta">Mua Ngay</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="San-Pham">
+        <div class="SanPham container">
+            <div class="SanPham-top">
+                <h1 class="section-title">Sản Phẩm</h1>
+            </div>
+            <div class="SanPham-bottom">
+                <div class="SanPham-item">
+                    <div class="icon"><img src="/images/main/sanphammoi.jpg" /></div>
+                    <h2>Sản Phẩm Mới</h2>
+
+                </div>
+                <div class="SanPham-item">
+                    <div class="icon"><img src="/images/main/banchay.jpg" /></div>
+                    <h2>Sản Phẩm Bán Chạy</h2>
+
+                </div>
+                <div class="SanPham-item">
+                    <div class="icon"><img src="/images/main/outsale.jpeg" /></div>
+                    <h2>Best Saller</h2>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+        <section id="Nam">
+            <div class="Nam container">
+                <div class="Nam-top">
+                    <h1 class="section-title">Nam</h1>
+                </div>
+                @foreach (var product in ViewBag.products)
+                {
+                    <div class="Nam-bottom" >
+                        <div class="Nam-item" >
+                            <div class="icon"><img src="@product.ProductImage" /></div>
+                            <h2>@product.ProductName</h2>
+                            <h2>@product.ProductPrice</h2>
+                            <a asp-controller="ASM" asp-action="buy" asp-route-id="@product.ProductId">
+                                <input type="submit"  value="Thêm Giỏ Hàng">
+                            </a>                        
+                        </div>
+                    </div>
+                  }
+                      
+            </div>                             
+        </section>
+    
+        <section id="Nu">
+            <div class="Nu container">
+                <div class="Nu-top">
+                    <h1 class="section-title">Nữ</h1>
+                </div>
+                <div class="Nu-bottom">
+                    <div class="Nu-item">
+                        <div class="icon"><img src="/images/main/sanphammoi.jpg" /></div>
+                        <h2>Sản Phẩm Mới</h2>
+                        <h2>3.900.000đ</h2>
+                        <input type="submit" value="Thêm Giỏ Hàng">
+
+                    </div>
+                    <div class="Nu-item">
+                        <div class="icon"><img src="/images/main/banchay.jpg" /></div>
+                        <h2>Sản Phẩm Bán Chạy</h2>
+                        <h2>3.900.000đ</h2>
+                        <input type="submit" value="Thêm Giỏ Hàng">
+
+                    </div>
+                    <div class="Nu-item">
+                        <div class="icon"><img src="/images/main/outsale.jpeg" /></div>
+                        <h2>Best Saller</h2>
+                        <h2>3.900.000đ</h2>
+                        <input type="submit" value="Thêm Giỏ Hàng">
+
+                    </div>
+
+                    <div class="Nu-item">
+                        <div class="icon"><img src="/images/main/outsale.jpeg" /></div>
+                        <h2>Best Saller</h2>
+                        <h2>3.900.000đ</h2>
+                        <input type="submit" value="Thêm Giỏ Hàng">
+
+                    </div>
+
+                    <div class="Nu-item">
+                        <div class="icon"><img src="/images/main/sanphammoi.jpg" /></div>
+                        <h2>Sản Phẩm Mới</h2>
+                        <h2>3.900.000đ</h2>
+                        <input type="submit" value="Thêm Giỏ Hàng">
+
+                    </div>
+                    <div class="Nu-item">
+                        <div class="icon"><img src="/images/main/banchay.jpg" /></div>
+                        <h2>Sản Phẩm Bán Chạy</h2>
+                        <h2>3.900.000đ</h2>
+                        <input type="submit" value="Thêm Giỏ Hàng">
+
+                    </div>
+                    <div class="Nu-item">
+                        <div class="icon"><img src="/images/main/outsale.jpeg" /></div>
+                        <h2>Best Saller</h2>
+                        <h2>3.900.000đ</h2>
+                        <input type="submit" value="Thêm Giỏ Hàng">
+
+                    </div>
+
+                    <div class="Nu-item">
+                        <div class="icon"><img src="/images/main/outsale.jpeg" /></div>
+                        <h2>Best Saller</h2>
+                        <h2>3.900.000đ</h2>
+                        <input type="submit" value="Thêm Giỏ Hàng">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    
+
+
+    <section id="Thong-Tin">
+        <div class="ThongTin container">
+            <div class="ThongTin-top">
+                <h1 class="section-title">Thông Tin Sản Phẩm</h1>
+            </div>
+            <div class="ThongTin-bottom">
+                <div class="ThongTin-item">
+                    <iframe width="400" height="300" src="https://www.youtube.com/embed/Eel0GolpQDA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h2>15 cách dễ dàng để mang Air Jordan 1 "Mocha"</h2>
+                </div>
+                <div class="ThongTin-item">
+                    <iframe width="400" height="300" src="https://www.youtube.com/embed/lNvVqcfPYMY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <H2>5 Cách Mới Phối Nike Air Jordan 1</H2>
+
+                </div>
+                <div class="ThongTin-item">
+                    <iframe width="400" height="300" src="https://www.youtube.com/embed/LYgcQcH6_TQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <H2>AIR JORDAN 1-23</H2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    @*<section id="footer">
+            <div class="footer container">
+                <div class="brand">
+                    <h1><span>H</span>ien <span>S</span>tore</h1>
+                </div>
+                <h2>Sneaker</h2>
+                <div class="social-icon">
+                    <div class="social-item">
+                        <a href="#"><img src="/images/main/fb.png" /></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="#"><img src="/images/main/ins.png" /></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="#"><img src="/images/main/ytb.png" /></a>
+                    </div>
+                </div>
+                <p>Copyright © 2021 TanHien. All rights reserved</p>
+            </div>
+        </section>*@
+
+</body>
+</html>
+
+
