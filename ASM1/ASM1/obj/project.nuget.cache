@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gaieDP9EsqevVhRoDqAUhIkOnlqCwQ1WQ8YaACwnFquYOSgsiIG3wlyGBYp4ebb14BYhGH0gHuWj47Nig2b/ag==",
+  "dgSpecHash": "4Hb8yDQBWK5uaxlBzAhpkdFuKvrtWr6PGLkrq8ndTPZCoLOZAvlXr+kjv6jUH3fqkqPe9g+xZumiZ9uESlUmlw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tan Hien\\OneDrive\\Documents\\Kỳ_5\\C#4\\Bài Lab\\PS16180_LeTanHien_ASM2\\ASM1\\ASM1\\ASM1.csproj",
+  "projectFilePath": "C:\\Users\\Tan Hien\\OneDrive\\Documents\\Kỳ_5\\C#4\\Bài Lab\\PS16180_LeTanHien_ASM2\\QLBHWeb(ASP.NET)\\ASM1\\ASM1\\ASM1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tan Hien\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.2.0\\microsoft.aspnetcore.cryptography.internal.2.2.0.nupkg.sha512",
     "C:\\Users\\Tan Hien\\.nuget\\packages\\microsoft.aspnetcore.dataprotection\\2.2.0\\microsoft.aspnetcore.dataprotection.2.2.0.nupkg.sha512",

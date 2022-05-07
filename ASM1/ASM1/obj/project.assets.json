@@ -8830,11 +8830,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tan Hien\\OneDrive\\Documents\\Kỳ_5\\C#4\\Bài Lab\\PS16180_LeTanHien_ASM2\\ASM1\\ASM1\\ASM1.csproj",
+      "projectUniqueName": "C:\\Users\\Tan Hien\\OneDrive\\Documents\\Kỳ_5\\C#4\\Bài Lab\\PS16180_LeTanHien_ASM2\\QLBHWeb(ASP.NET)\\ASM1\\ASM1\\ASM1.csproj",
       "projectName": "ASM1",
-      "projectPath": "C:\\Users\\Tan Hien\\OneDrive\\Documents\\Kỳ_5\\C#4\\Bài Lab\\PS16180_LeTanHien_ASM2\\ASM1\\ASM1\\ASM1.csproj",
+      "projectPath": "C:\\Users\\Tan Hien\\OneDrive\\Documents\\Kỳ_5\\C#4\\Bài Lab\\PS16180_LeTanHien_ASM2\\QLBHWeb(ASP.NET)\\ASM1\\ASM1\\ASM1.csproj",
       "packagesPath": "C:\\Users\\Tan Hien\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tan Hien\\OneDrive\\Documents\\Kỳ_5\\C#4\\Bài Lab\\PS16180_LeTanHien_ASM2\\ASM1\\ASM1\\obj\\",
+      "outputPath": "C:\\Users\\Tan Hien\\OneDrive\\Documents\\Kỳ_5\\C#4\\Bài Lab\\PS16180_LeTanHien_ASM2\\QLBHWeb(ASP.NET)\\ASM1\\ASM1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
